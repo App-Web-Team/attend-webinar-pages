@@ -32,6 +32,12 @@
     .fa-circle-user {
         font-size: 70px;
     }
+
+    @media screen and (max-width: 992px) {
+        .navbar-nav a {
+            margin-top: 20px;
+        }
+    }
 </style>
 
 <!-- navbar -->

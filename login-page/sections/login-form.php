@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="assets/styles/style-login.css">
 </head>
 
-<div class="container py-5 d-flex justify-content-center">
+<div class="container login-container d-flex justify-content-center align-items-center">
     <div class="login-box">
         <!-- login text -->
         <div class="login-text">
