@@ -19,10 +19,6 @@
             <div class="mb-3">
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
-            <a href="" class="forget-pwd text-capitalize">forgot password</a>
-            <a href="" class="sign-up mt-4">
-                Don't have an account?
-            </a>
             <div class="text-center">
                 <button type="submit" class="btn mt-3 text-uppercase">login</button>
             </div>

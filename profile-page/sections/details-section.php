@@ -10,9 +10,10 @@
             $(".tabs-row div:nth-child(2)").removeClass("tab-active");
             $(".tabs-row div:nth-child(3)").removeClass("tab-active");
             $(".tabs-row div:nth-child(1)").addClass("tab-active");
-            
+
             $(".webinar-box > div:nth-child(1)").removeClass("first-active-area-move-up");
             $(".webinar-box > div:nth-child(2)").removeClass("second-active-area-move-up");
+            $(".webinar-box > div:nth-child(3)").removeClass("third-active-area-move-up");
         });
     });
     $(document).ready(function() {
@@ -23,6 +24,7 @@
 
             $(".webinar-box > div:nth-child(1)").addClass("first-active-area-move-up");
             $(".webinar-box > div:nth-child(2)").addClass("second-active-area-move-up");
+            $(".webinar-box > div:nth-child(3)").removeClass("third-active-area-move-up");
         });
     });
     $(document).ready(function() {
@@ -30,6 +32,61 @@
             $(".tabs-row div:nth-child(1)").removeClass("tab-active");
             $(".tabs-row div:nth-child(2)").removeClass("tab-active");
             $(".tabs-row div:nth-child(3)").addClass("tab-active");
+
+            $(".webinar-box > div:nth-child(1)").addClass("first-active-area-move-up");
+            $(".webinar-box > div:nth-child(2)").removeClass("second-active-area-move-up");
+            $(".webinar-box > div:nth-child(3)").addClass("third-active-area-move-up");
+        });
+    });
+    // settings jquery
+    $(document).ready(function() {
+        $(".side-tabs button:nth-child(1)").click(function() {
+            $(".side-tabs button:nth-child(1) p").addClass("side-bar-active");
+            $(".side-tabs button:nth-child(2) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(3) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(4) p").removeClass("side-bar-active");
+
+            // showing profile content
+            $(".right-wrapper > div:nth-child(1)").removeClass("profile-section-area");
+            $(".right-wrapper > div:nth-child(2)").removeClass("change-pwd-area");
+            $(".right-wrapper > div:nth-child(3)").removeClass("contact-area");
+            $(".right-wrapper > div:nth-child(4)").removeClass("account-area");
+        });
+        $(".side-tabs button:nth-child(2)").click(function() {
+            $(".side-tabs button:nth-child(1) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(2) p").addClass("side-bar-active");
+            $(".side-tabs button:nth-child(3) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(4) p").removeClass("side-bar-active");
+
+            // showing pwd content
+            $(".right-wrapper > div:nth-child(1)").addClass("profile-section-area");
+            $(".right-wrapper > div:nth-child(2)").addClass("change-pwd-area");
+            $(".right-wrapper > div:nth-child(3)").removeClass("contact-area");
+            $(".right-wrapper > div:nth-child(4)").removeClass("account-area");
+        });
+        $(".side-tabs button:nth-child(3)").click(function() {
+            $(".side-tabs button:nth-child(1) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(2) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(3) p").addClass("side-bar-active");
+            $(".side-tabs button:nth-child(4) p").removeClass("side-bar-active");
+
+            // showing pwd content
+            $(".right-wrapper > div:nth-child(1)").addClass("profile-section-area");
+            $(".right-wrapper > div:nth-child(2)").removeClass("change-pwd-area");
+            $(".right-wrapper > div:nth-child(3)").addClass("contact-area");
+            $(".right-wrapper > div:nth-child(4)").removeClass("account-area");
+        });
+        $(".side-tabs button:nth-child(4)").click(function() {
+            $(".side-tabs button:nth-child(1) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(2) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(3) p").removeClass("side-bar-active");
+            $(".side-tabs button:nth-child(4) p").addClass("side-bar-active");
+
+            // showing pwd content
+            $(".right-wrapper > div:nth-child(1)").addClass("profile-section-area");
+            $(".right-wrapper > div:nth-child(2)").removeClass("change-pwd-area");
+            $(".right-wrapper > div:nth-child(3)").removeClass("contact-area");
+            $(".right-wrapper > div:nth-child(4)").addClass("account-area");
         });
     });
 </script>
@@ -61,7 +118,8 @@
                 <!-- webinar box -->
                 <div class="webinar-box mt-4">
                     <!-- webinar area -->
-                    <div class="mb-5">
+                    <!-- <div class="first-active-area-move-up mb-5"> -->
+                    <div class=" mb-5">
                         <!-- webinar 1 -->
                         <div class="row webinar-details justify-content-between">
                             <div class="col-6">
@@ -87,6 +145,7 @@
                         </div>
                     </div>
                     <!-- course area -->
+                    <!-- <div class="second-active-area-move-up"> -->
                     <div class="">
                         <!-- course 1 -->
                         <div class="row webinar-details course-details justify-content-between">
@@ -112,6 +171,67 @@
                         </div>
                     </div>
                     <!-- settings area -->
+                    <!-- <div class="third-active-area-move-up"> -->
+                    <div class="">
+                        <div class="row">
+                            <!-- side tabs -->
+                            <div class="col-4 side-tabs text-center">
+                                <button>
+                                    <p class="side-bar-active">profile</p>
+                                </button>
+                                <button>
+                                    <p>change password</p>
+                                </button>
+                                <button>
+                                    <p>contact info</p>
+                                </button>
+                                <button>
+                                    <p>account log</p>
+                                </button>
+                            </div>
+                            <!-- fixed right wrapper -->
+                            <div class="col-8 right-wrapper">
+                                <!-- profile section -->
+                                <!-- <div class="profile-section-area"> -->
+                                <div class="profile">
+                                    <p>profile page</p>
+                                </div>
+                                <!-- change-password section -->
+                                <!-- <div class="change-pwd-area"> -->
+                                <div class="">
+                                    <!-- form -->
+                                    <form class="mt-5">
+                                        <div class="row">
+                                            <div class="col mb-2">
+                                                <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Old Password">
+                                            </div>
+                                            <div class="col mb-2">
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="col-6 mb-3">
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="col-6 text-right">
+                                                <button type="submit" class="btn text-uppercase">update</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- contact section -->
+                                <div class="contact">
+                                    <p>contact page</p>
+                                </div>
+                                <!-- account section -->
+                                <div class="account">
+                                    <p>account page</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
